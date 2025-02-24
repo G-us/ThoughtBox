@@ -9,7 +9,7 @@ Plans to make a 3D-printed box with a Raspberry Pi inside. When the button is pr
 
 ### Python libraries on reciever:
 - Flask
-- HueSDK
+- HueSDK (optional)
 - Win10Toast
 
 ### Python libraries on sender:
@@ -21,4 +21,10 @@ The computer in your ThoughtBox (A Raspberry Pi in my case), the sender, will be
 When the button connected to the Raspberry Pi is pushed it sends a GET request through the Tailscale VPN service and to the Flask webserver running on the reciever. This will then do or display whatever you want it to.
 
 ## Setup
+**On the sender side**
+
 Setting up sender involves installing the Tailscale VPN service (https://tailscale.com/kb/1347/installation) and ensuring that on start up it starts the Python script. In the ```SenderThoughtBox.py``` file. Change the requests.get addresses to the correct machine IP which you get from Tailscale.
+
+**On the reciever side**
+
+You have to set up a Flask app along with the Tailscale VPN service. I do not know how to set up a Flask app as I just made PyCharm do it for me but if anyone knows, please post. If you happen to have Hue lights you can uncomment the lines regarding the hue lights, otherwise those can be ignored. 
