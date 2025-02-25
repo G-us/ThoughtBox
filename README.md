@@ -27,4 +27,8 @@ Setting up sender involves installing the Tailscale VPN service (https://tailsca
 
 **On the reciever side**
 
-You have to set up a Flask app along with the Tailscale VPN service. I do not know how to set up a Flask app as I just made PyCharm do it for me but if anyone knows, please post. If you happen to have Hue lights you can uncomment the lines regarding the hue lights, otherwise those can be ignored. 
+You have to set up a Flask app along with the Tailscale VPN service. I do not know how to set up a Flask app as I just made PyCharm do it for me but if anyone knows, please post. If you happen to have Hue lights you can uncomment the lines regarding the hue lights, otherwise those can be ignored. To get the IP your sender has to send the GET request you will have run tailscale serve "port your flask app is running on" in the command line and copy the address given to you.
+
+## 3D Printed Box
+
+In the "Hardware" folder in the repo are all the files you need to print to make this box. Do your normal settings and it should turn out fine. The holes in the main box are for heatset inserts, along with the 3 ones close to the thing sticking out on the lid and the 4 inner holes. Three rods screw into the 3 holes close to the thing sticking out because that's what I had on hand but I will supply the STEP files so you can modify however you want.
